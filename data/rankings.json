@@ -1,0 +1,131 @@
+{
+  "date": "2025-08-19",
+  "sectors": {
+    "テクノロジー": {
+      "stocks": [
+        {
+          "symbol": "AAPL",
+          "name": "Apple",
+          "changePct": 1.9,
+          "price": 232.1
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft",
+          "changePct": 1.5,
+          "price": 455.2
+        },
+        {
+          "symbol": "NVDA",
+          "name": "NVIDIA",
+          "changePct": 1.2,
+          "price": 120.4
+        }
+      ],
+      "indices": [
+        {
+          "symbol": "QQQ",
+          "name": "Invesco QQQ",
+          "changePct": 1.6,
+          "price": 480.7
+        },
+        {
+          "symbol": "XLK",
+          "name": "Tech Select Sector SPDR",
+          "changePct": 1.4,
+          "price": 232.6
+        },
+        {
+          "symbol": "VGT",
+          "name": "Vanguard IT ETF",
+          "changePct": 1.3,
+          "price": 505.1
+        }
+      ]
+    },
+    "金融": {
+      "stocks": [
+        {
+          "symbol": "JPM",
+          "name": "JPMorgan",
+          "changePct": 1.1,
+          "price": 212.3
+        },
+        {
+          "symbol": "BAC",
+          "name": "Bank of America",
+          "changePct": 0.9,
+          "price": 41.2
+        },
+        {
+          "symbol": "GS",
+          "name": "Goldman Sachs",
+          "changePct": 0.8,
+          "price": 422.8
+        }
+      ],
+      "indices": [
+        {
+          "symbol": "XLF",
+          "name": "Financials SPDR",
+          "changePct": 0.7,
+          "price": 44.1
+        },
+        {
+          "symbol": "VFH",
+          "name": "Vanguard Financials ETF",
+          "changePct": 0.6,
+          "price": 100.2
+        },
+        {
+          "symbol": "KBE",
+          "name": "SPDR Bank ETF",
+          "changePct": 0.5,
+          "price": 45.7
+        }
+      ]
+    },
+    "エネルギー": {
+      "stocks": [
+        {
+          "symbol": "XOM",
+          "name": "Exxon Mobil",
+          "changePct": 1.3,
+          "price": 132.0
+        },
+        {
+          "symbol": "CVX",
+          "name": "Chevron",
+          "changePct": 1.1,
+          "price": 168.4
+        },
+        {
+          "symbol": "SLB",
+          "name": "Schlumberger",
+          "changePct": 0.9,
+          "price": 48.9
+        }
+      ],
+      "indices": [
+        {
+          "symbol": "XLE",
+          "name": "Energy SPDR",
+          "changePct": 1.0,
+          "price": 94.5
+        },
+        {
+          "symbol": "VDE",
+          "name": "Vanguard Energy ETF",
+          "changePct": 0.9,
+          "price": 127.3
+        },
+        {
+          "symbol": "IXC",
+          "name": "iShares Global Energy",
+          "changePct": 0.8,
+          "price": 46.0
+        }
+      ]
+    }
+  }
+}

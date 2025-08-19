@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="160" viewBox="0 0 260 160">
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- subtle grid -->
+  <g stroke="#ffffff" stroke-opacity="0.06" stroke-width="1">
+    <path d="M0 20 H260 M0 40 H260 M0 60 H260 M0 80 H260 M0 100 H260 M0 120 H260 M0 140 H260"/>
+    <path d="M20 0 V160 M40 0 V160 M60 0 V160 M80 0 V160 M100 0 V160 M120 0 V160 M140 0 V160 M160 0 V160 M180 0 V160 M200 0 V160 M220 0 V160 M240 0 V160"/>
+  </g>
+
+  <!-- golden-spiral-like curves -->
+  <g fill="none" stroke="#bfe0ff" stroke-opacity="0.45" stroke-width="1.5">
+    <!-- Spiral 1 -->
+    <path d="M30,130
+             C 30,90 70,70 90,70
+             C 120,70 140,90 140,110
+             C 140,130 130,140 115,145"/>
+    <!-- Spiral 2 (offset) -->
+    <path d="M130,40
+             C 130,20 150,10 165,10
+             C 190,10 210,30 210,55
+             C 210,80 190,95 170,100"/>
+    <!-- Spiral 3 (mirrored) -->
+    <path d="M70,30
+             C 50,30 40,50 40,65
+             C 40,90 60,105 85,105
+             C 105,105 120,95 125,85"/>
+  </g>
+
+  <!-- soft overlay for depth -->
+  <rect x="0" y="0" width="260" height="160" fill="url(#fade)"/>
+</svg>
