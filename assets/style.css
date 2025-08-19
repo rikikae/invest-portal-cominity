@@ -34,7 +34,7 @@ a:hover{text-decoration:underline}
 .hero .hero-inner{display:flex; align-items:center; justify-content:space-between; gap:24px; padding:48px 0}
 .hero.small .hero-inner{padding:32px 0}
 .hero-text h1{margin:0 0 8px; font-size:40px}
-.hero-text p{margin:0 0 16px; color:var(--muted)}
+.hero-text p{margin:0 0 16px; color:#muted}
 .search{display:flex; gap:10px}
 .search input{flex:1; padding:14px 16px; border-radius:12px; background:rgba(255,255,255,.06); border:1px solid var(--border); color:#fff; outline:none}
 .btn-neon{padding:14px 16px; border-radius:12px; border:1px solid var(--border); color:#00131a; font-weight:700; cursor:pointer;

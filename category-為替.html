@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>用語辞典 - 為替</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css" />
-  <script>
-    const CAT_NAME = "為替";
-  </script>
+  <script>window.CAT_NAME = "為替";</script>
   <script src="assets/app-category.js" defer></script>
 </head>
 <body id="top" data-cat="為替">
@@ -19,12 +19,35 @@
         <a href="econ.html">経済情報</a>
         <a href="glossary.html">用語辞典（総合）</a>
       </nav>
+      <form class="nav-search" onsubmit="event.preventDefault();" aria-label="用語検索">
+        <input id="hdr-q" type="text" placeholder="このカテゴリ内で検索（URLに ?q= を付けてもOK）">
+      </form>
     </div>
   </header>
+
+  <section class="hero neon-gradient small">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>為替</h1>
+        <p>このページは『為替』カテゴリの用語だけを表示します。</p>
+      </div>
+    </div>
+    <div class="glow"></div>
+  </section>
+
   <section class="section">
     <div class="container">
       <div id="results"></div>
+      <p class="backtop"><a href="#top">▲ ページ先頭へ戻る</a></p>
     </div>
   </section>
+
+  <footer class="site-footer glass">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> 投資ポータル</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

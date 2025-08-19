@@ -1,16 +1,23 @@
-# Category 404 Hotfix — 2025-08-19
+# 投資ポータル 完全版 — 2025-08-19
 
-このパックには：
-- `assets/app.js`（404時に**自動フォールバック**。カテゴリページが無い場合は `glossary.html` の同カテゴリ見出しにスクロール）
-- 標準カテゴリのページ（category-テクニカル.html, category-ファンダメンタルズ.html, category-為替.html, category-リスク・資金管理.html, category-ローソク足・型.html, category-理論・法則.html, category-その他.html）
-- `assets/app-category.js`（カテゴリページ用レンダラー）
+このパックは **GitHub Pages にそのままドラッグ＆ドロップ**で動く完成形です。
 
-## 使い方
-1) ZIPを解凍
-2) リポジトリのトップで **Add file → Upload files**
-   - `assets/app.js` と `assets/app-category.js` を **上書き**
-   - `category-*.html` を **追加**
-3) **Commit changes**
-4) 目次をクリック → 404にならず、カテゴリページに遷移（存在しなければ総合ページ内へフォールバック）
+## 収録
+- `index.html`：ローソク足の主要チャート（USDJPY / NI225 / DJI）
+- `glossary.html`：用語辞典（検索＋カテゴリー見出し＋目次→カテゴリページ）
+- `econ.html`：リアルタイム経済ダッシュボード（概況・為替クロス・ヒートマップ・経済カレンダー）
+- `category-*.html`：`data/terms.json` のカテゴリから自動生成
+- `assets/`：スタイル＆JS
+- `data/terms.json`：基礎用語＋酒田五法＋理論・法則を収録
 
-> ファイル名が異なる場合は、`assets/app.js` の `CAT_TO_PAGE` を編集して揃えてください。
+## 導入（3分）
+1. ZIPを解凍して中身をリポジトリ直下に**上書きアップロード**
+2. **Commit changes**
+3. 数分後に公開URLを強制リロード（Cmd/Ctrl+Shift+R）
+
+## カスタマイズ
+- 用語追加：`data/terms.json` にオブジェクトを追加（title/definition/category など） → 目次＆カテゴリページに自動反映
+- チャート銘柄：`index.html` の TradingViewウィジェットの `symbol` を変更
+- 配色/列数：`assets/style.css` の CSS変数や `.cat-group` の列数を調整
+
+困ったらURLを教えてください。あなたのリポ構成に合わせて差分パッチを作ります。
