@@ -1,1 +1,106 @@
-<!DOCTYPE html><html lang='ja'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>投資ポータル | モダン</title><link rel='stylesheet' href='assets/style.css'></head><body><header class='site-header glass'><div class='container'><a class='brand' href='index.html'><span class='logo'>⚡</span><span class='title'>投資ポータル</span></a><nav class='nav'><a href='#markets'>相場</a><a href='#calendar'>カレンダー</a><a href='glossary.html'>用語辞典</a></nav></div></header><section class='hero neon-gradient'><div class='container hero-inner'><div class='hero-text'><h1>相場 × 用語 × 一瞬で。</h1><p>ダーク×ネオンのプロフェッショナルUI</p><form action='glossary.html' method='GET' class='search'><input type='text' name='q' placeholder='例：RSI, MACD, PER, スワップ'><button type='submit' class='btn-neon'>検索</button></form></div></div><div class='glow'></div></section><section id='markets' class='section'><div class='container'><div class='card glass'><h3>主要チャート</h3><div class='tradingview-widget-container tv-wrap'><div class='tradingview-widget-container__widget'></div><script type='text/javascript' src='https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js' async>{"symbols":[["FOREXCOM:USDJPY|1D"],["TVC:NI225|1D"],["DJCFD:DJI|1D"]],"locale":"ja","colorTheme":"dark","width":"100%","height":"520","showMA":true,"showVolume":true}</script></div></div></div></section><section id='calendar' class='section'><div class='container'><div class='card glass'><h3>経済カレンダー</h3><div class='tradingview-widget-container tv-wrap'><div class='tradingview-widget-container__widget'></div><script type='text/javascript' src='https://s3.tradingview.com/external-embedding/embed-widget-events.js' async>{"colorTheme":"dark","width":"100%","height":"520","locale":"ja","importanceFilter":"-1,0,1","timeZone":"Asia/Tokyo"}</script></div></div></div></section><footer class='site-footer glass'><div class='container footer-inner'><div>© <span id='year'></span> 投資ポータル</div></div></footer><script>document.getElementById('year').textContent=new Date().getFullYear()</script></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>投資ポータル | 最適化版</title>
+  <meta name="description" content="株・為替・テクニカル・イベントをワンストップで。ダーク×ネオンのモダンUI＋読みやすいタイポで最適化。">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body id="top">
+  <header class="site-header glass">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="logo">⚡</span>
+        <span class="title">投資ポータル</span>
+      </a>
+      <nav class="nav">
+        <a href="#markets">相場</a>
+        <a href="#calendar">カレンダー</a>
+        <a href="glossary.html">用語辞典</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero neon-gradient">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>相場と用語、<br/>ここで完結。</h1>
+        <p>読みやすい文字設計 × ネオンUI。主要チャートと用語辞典を最短で。</p>
+        <form action="glossary.html" method="GET" class="search">
+          <input type="text" name="q" placeholder="例：酒田五法, RSI, PER, スワップ" aria-label="用語検索">
+          <button type="submit" class="btn-neon">検索</button>
+        </form>
+      </div>
+      <div class="hero-badge">
+        <div class="badge glass">LIVE</div>
+        <div class="sub">USDJPY / NI225 / DJI を即チェック</div>
+      </div>
+    </div>
+    <div class="glow"></div>
+  </section>
+
+  <section id="markets" class="section">
+    <div class="container">
+      <div class="card glass full">
+        <h3>主要チャート</h3>
+        <div class="tradingview-widget-container tv-wrap">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+          {
+            "symbols": [
+              [ "FOREXCOM:USDJPY|1D" ],
+              [ "TVC:NI225|1D" ],
+              [ "DJCFD:DJI|1D" ]
+            ],
+            "chartOnly": false,
+            "width": "100%",
+            "height": "540",
+            "locale": "ja",
+            "colorTheme": "dark",
+            "showVolume": true,
+            "showMA": true,
+            "scalePosition": "right",
+            "scaleMode": "Normal",
+            "fontFamily": "Inter, 'Noto Sans JP', system-ui, -apple-system, 'Segoe UI', Roboto, Arial"
+          }
+          </script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calendar" class="section">
+    <div class="container">
+      <div class="card glass full">
+        <h3>経済カレンダー</h3>
+        <div class="tradingview-widget-container tv-wrap">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+          {
+            "colorTheme": "dark",
+            "isTransparent": true,
+            "width": "100%",
+            "height": "520",
+            "locale": "ja",
+            "importanceFilter": "-1,0,1",
+            "timeZone": "Asia/Tokyo"
+          }
+          </script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer glass">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> 投資ポータル</div>
+      <div class="muted">Optimized UI / GitHub Pages × TradingView</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

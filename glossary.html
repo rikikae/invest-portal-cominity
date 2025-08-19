@@ -1,1 +1,74 @@
-<!DOCTYPE html><html lang='ja'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>用語辞典 | モダン</title><link rel='stylesheet' href='assets/style.css'></head><body><header class='site-header glass'><div class='container'><a class='brand' href='index.html'><span class='logo'>📘</span><span class='title'>用語辞典</span></a><nav class='nav'><a href='index.html#markets'>相場</a><a href='index.html#calendar'>カレンダー</a><a class='active' href='glossary.html'>用語辞典</a></nav></div></header><section class='hero neon-gradient small'><div class='container hero-inner'><div class='hero-text'><h1>用語を瞬時に検索</h1><p>RSI / MACD / PER / PBR / スワップ</p><form class='search' onsubmit='return false;'><input id='q' type='text' placeholder='キーワードを入力'><button id='searchBtn' class='btn-neon'>検索</button></form></div></div><div class='glow'></div></section><section class='section'><div class='container'><div id='results' class='grid terms-grid'></div></div></section><footer class='site-footer glass'><div class='container footer-inner'><div>© <span id='year'></span> 投資ポータル</div></div></footer><script src='assets/app.js'></script><script>document.getElementById('year').textContent=new Date().getFullYear();window.addEventListener('DOMContentLoaded',()=>{const p=new URLSearchParams(window.location.search);const q=p.get('q')||'';document.getElementById('q').value=q;window.renderTerms(q);document.getElementById('searchBtn').addEventListener('click',()=>window.renderTerms(document.getElementById('q').value));document.getElementById('q').addEventListener('input',e=>window.renderTerms(e.target.value));});</script></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>用語辞典 | 最適化版</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body id="top">
+  <header class="site-header glass">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="logo">📘</span>
+        <span class="title">用語辞典</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html#markets">相場</a>
+        <a href="index.html#calendar">カレンダー</a>
+        <a class="active" href="glossary.html">用語辞典</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero neon-gradient small">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>用語を瞬時に検索</h1>
+        <p>カテゴリー見出し＋目次つき。酒田五法の全系統も収録。</p>
+        <form class="search" onsubmit="return false;">
+          <input id="q" type="text" placeholder="例：酒田五法, 三山, RSI, PER" aria-label="用語検索">
+          <button id="searchBtn" class="btn-neon">検索</button>
+        </form>
+      </div>
+    </div>
+    <div class="glow"></div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- TOC -->
+      <nav id="toc" class="toc card" aria-label="カテゴリー目次">
+        <div class="toc-title">カテゴリー</div>
+        <div id="toc-links" class="toc-links"></div>
+      </nav>
+
+      <!-- Results grouped by category -->
+      <div id="results"></div>
+
+      <p class="backtop"><a href="#top">▲ ページ先頭へ戻る</a></p>
+    </div>
+  </section>
+
+  <footer class="site-footer glass">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> 投資ポータル</div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get('q') || '';
+      document.getElementById('q').value = q;
+      window.renderTerms(q);
+      document.getElementById('searchBtn').addEventListener('click', () => window.renderTerms(document.getElementById('q').value));
+      document.getElementById('q').addEventListener('input', (e) => window.renderTerms(e.target.value));
+    });
+  </script>
+</body>
+</html>
