@@ -1,76 +1,20 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>用語辞典（総合）</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>用語辞典 | 投資ポータル</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
-<body id="top">
-  <header class="site-header glass">
-    <div class="container">
-      <a class="brand" href="index.html"><span class="logo">📘</span><span class="title">用語辞典</span></a>
-      <nav class="nav">
-        <a href="index.html#markets">相場</a>
-        <a href="econ.html">経済情報</a>
-        <a class="active" href="glossary.html">用語辞典</a>
-      </nav>
-      <form class="nav-search" onsubmit="event.preventDefault(); window.renderTerms(document.getElementById('q').value);" aria-label="用語検索">
-        <input id="q" type="text" placeholder="キーワードを入力（例：ダウ理論, 三山）">
-      </form>
-    </div>
-  </header>
-
-  <section class="hero neon-gradient small">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>用語を素早く、体系的に</h1>
-        <p>カテゴリ見出しで区切り、<b>目次はカテゴリ別ページへ遷移</b>します。</p>
-        <form class="search" onsubmit="event.preventDefault(); window.renderTerms(document.getElementById('q').value);">
-          <input id="q2" type="text" placeholder="例：酒田五法, エリオット, グランビル">
-          <button id="searchBtn" class="btn-neon">検索</button>
-        </form>
-      </div>
-    </div>
-    <div class="glow"></div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <nav id="toc" class="toc card" aria-label="カテゴリで絞り込む">
-        <div class="toc-title">カテゴリで絞り込む</div>
-        <div id="toc-links" class="toc-links"></div>
-      </nav>
-      <div id="results"></div>
-      <p class="backtop"><a href="#top">▲ ページ先頭へ戻る</a></p>
-    </div>
-  </section>
-
-  <footer class="site-footer glass">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> 投資ポータル</div>
-    </div>
-  </footer>
-
-  <script>window.CAT_TO_FILE = {"テクニカル": "category-テクニカル.html", "ファンダメンタルズ": "category-ファンダメンタルズ.html", "リスク・資金管理": "category-リスク資金管理.html", "ローソク足・型": "category-ローソク足型.html", "為替": "category-為替.html", "理論・法則": "category-理論法則.html"};</script>
-  <script src="assets/app.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    window.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(window.location.search);
-      const q = params.get('q') || '';
-      const input = document.getElementById('q');
-      const input2 = document.getElementById('q2');
-      if (input) input.value = q;
-      if (input2) input2.value = q;
-      window.renderTerms(q);
-      const handler = () => window.renderTerms((input2 && input2.value) || (input && input.value) || '');
-      if (input) input.addEventListener('input', handler);
-      if (input2) input2.addEventListener('input', handler);
-      const btn = document.getElementById('searchBtn'); if (btn) btn.addEventListener('click', handler);
-    });
-  </script>
+<body>
+<header class="site-header glass"><div class="container"><a href="index.html">投資ポータル</a></div></header>
+<section class="page-hero container">
+  <h1>投資に必要な知識を体系的に整理</h1>
+  <p class="sub">知りたい用語に、最短でたどり着く。</p>
+</section>
+<section class="container">
+  <h2>カテゴリから探す</h2>
+  <h2>横断検索で探す</h2>
+</section>
 </body>
 </html>
