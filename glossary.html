@@ -1,76 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>用語辞典（総合）</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>用語辞典｜投資に必要な知識を体系的に整理</title>
+<meta name="description" content="チャートで学び、用語で整理し、経済で広がる投資の世界。学びから実践まで、投資に必要な情報を上品に、わかりやすく。">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="用語辞典｜投資に必要な知識を体系的に整理">
+<meta property="og:description" content="チャートで学び、用語で整理し、経済で広がる投資の世界。学びから実践まで、投資に必要な情報を上品に、わかりやすく。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script defer src="assets/js/main.js"></script>
+
 </head>
-<body id="top">
-  <header class="site-header glass">
-    <div class="container">
-      <a class="brand" href="index.html"><span class="logo">📘</span><span class="title">用語辞典</span></a>
-      <nav class="nav">
-        <a href="index.html#markets">相場</a>
-        <a href="econ.html">経済情報</a>
-        <a class="active" href="glossary.html">用語辞典</a>
-      </nav>
-      <form class="nav-search" onsubmit="event.preventDefault(); window.renderTerms(document.getElementById('q').value);" aria-label="用語検索">
-        <input id="q" type="text" placeholder="キーワードを入力（例：ダウ理論, 三山）">
-      </form>
-    </div>
-  </header>
+<body>
+<header class="site-header container" role="banner">
+  <a class="logo" href="index.html">Invest<span>Portal</span></a>
+  <nav class="nav" role="navigation" aria-label="主要メニュー">
+    <a href="markets.html">相場</a>
+    <a href="glossary.html">用語辞典</a>
+    <a href="economy.html">経済情報</a>
+  </nav>
+</header>
 
-  <section class="hero neon-gradient small">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>用語を素早く、体系的に</h1>
-        <p>カテゴリ見出しで区切り、<b>目次はカテゴリ別ページへ遷移</b>します。</p>
-        <form class="search" onsubmit="event.preventDefault(); window.renderTerms(document.getElementById('q').value);">
-          <input id="q2" type="text" placeholder="例：酒田五法, エリオット, グランビル">
-          <button id="searchBtn" class="btn-neon">検索</button>
-        </form>
-      </div>
-    </div>
-    <div class="glow"></div>
+<main id="main">
+  <section class="page-hero container">
+    <h1>投資に必要な知識を体系的に整理</h1>
+    <p class="sub">学びやすく、探しやすい投資用語集（カテゴリ別ページ）</p>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <nav id="toc" class="toc card" aria-label="カテゴリで絞り込む">
-        <div class="toc-title">カテゴリで絞り込む</div>
-        <div id="toc-links" class="toc-links"></div>
-      </nav>
-      <div id="results"></div>
-      <p class="backtop"><a href="#top">▲ ページ先頭へ戻る</a></p>
+  <section class="container">
+    <div class="search-row">
+      <label for="glossarySearch" class="visually-hidden">用語を検索</label>
+      <input id="glossarySearch" type="search" placeholder="用語を横断検索（例：ダウ理論、RSI、インフレ）" aria-label="用語を検索">
+    </div>
+
+    <div class="categories" role="navigation" aria-label="用語カテゴリ">
+      <a class="chip" href="glossary-basic.html">基礎</a>
+      <a class="chip" href="glossary-technical.html">テクニカル</a>
+      <a class="chip" href="glossary-chart.html">チャート理論</a>
+      <a class="chip" href="glossary-fundamentals.html">ファンダメンタルズ</a>
+      <a class="chip" href="glossary-macro.html">マクロ経済</a>
+      <a class="chip" href="glossary-risk.html">リスク管理</a>
+    </div>
+
+    <div id="glossaryList" class="glossary-list" aria-live="polite">
+      <article class="term" data-tags="チャート理論 テクニカル"><h3>ダウ理論</h3><p>相場の主要トレンドと副次トレンドを捉える古典的理論。</p></article>
+      <article class="term" data-tags="チャート理論 テクニカル"><h3>エリオット波動</h3><p>群衆心理が作る波動パターンを分析する手法。</p></article>
+      <article class="term" data-tags="テクニカル"><h3>RSI</h3><p>買われすぎ・売られすぎを測るオシレーター。</p></article>
+      <article class="term" data-tags="テクニカル"><h3>MACD</h3><p>短期と長期の移動平均の乖離を用いたトレンド系指標。</p></article>
+      <article class="term" data-tags="リスク管理 基礎"><h3>損切り</h3><p>損失を限定するための強制的な手仕舞いルール。</p></article>
+      <article class="term" data-tags="ファンダメンタルズ マクロ経済"><h3>インフレ</h3><p>物価水準の持続的な上昇。</p></article>
+      <article class="term" data-tags="ファンダメンタルズ"><h3>PER（株価収益率）</h3><p>株価が利益に対して割高かを示す指標。</p></article>
+    </div>
+
+    <div class="panel" style="margin-top:16px;">
+      <h2>カテゴリ一覧</h2>
+      <ul class="list">
+        <li><a href="glossary-basic.html">基礎の用語</a></li>
+        <li><a href="glossary-technical.html">テクニカルの用語</a></li>
+        <li><a href="glossary-chart.html">チャート理論の用語</a></li>
+        <li><a href="glossary-fundamentals.html">ファンダメンタルズの用語</a></li>
+        <li><a href="glossary-macro.html">マクロ経済の用語</a></li>
+        <li><a href="glossary-risk.html">リスク管理の用語</a></li>
+      </ul>
     </div>
   </section>
-
-  <footer class="site-footer glass">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> 投資ポータル</div>
+</main>
+<footer class="site-footer" role="contentinfo">
+  <div class="container foot-grid">
+    <div>
+      <div class="logo foot-logo">Invest<span>Portal</span></div>
+      <p class="muted">チャートで学び、用語で整理し、経済で広がる投資の世界</p>
     </div>
-  </footer>
+    <div class="foot-links" aria-label="フッターメニュー">
+      <a href="index.html">ホーム</a>
+      <a href="markets.html">相場</a>
+      <a href="glossary.html">用語辞典</a>
+      <a href="economy.html">経済情報</a>
+    </div>
+  </div>
+  <div class="copyright container">© 2025 Invest Portal</div>
+</footer>
 
-  <script>window.CAT_TO_FILE = {"テクニカル": "category-テクニカル.html", "ファンダメンタルズ": "category-ファンダメンタルズ.html", "リスク・資金管理": "category-リスク資金管理.html", "ローソク足・型": "category-ローソク足型.html", "為替": "category-為替.html", "理論・法則": "category-理論法則.html"};</script>
-  <script src="assets/app.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    window.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(window.location.search);
-      const q = params.get('q') || '';
-      const input = document.getElementById('q');
-      const input2 = document.getElementById('q2');
-      if (input) input.value = q;
-      if (input2) input2.value = q;
-      window.renderTerms(q);
-      const handler = () => window.renderTerms((input2 && input2.value) || (input && input.value) || '');
-      if (input) input.addEventListener('input', handler);
-      if (input2) input2.addEventListener('input', handler);
-      const btn = document.getElementById('searchBtn'); if (btn) btn.addEventListener('click', handler);
-    });
-  </script>
 </body>
 </html>
