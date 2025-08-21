@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>酒田五法</title>
-  <link rel="stylesheet" href="../css/style.css">
+<style>
+  figure img {
+    max-width: 680px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: .25rem auto;
+  }
+  .search-bar {
+    display: none !important;
+  }
+</style>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>酒田五法（ローソク足の体系）</title>
+  <link rel="stylesheet" href="../css/style.css" />
+<style>
+  /* 投資理論ページ専用（このページだけに適用） */
+  figure img {
+    max-width: 680px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: .25rem auto;
+  }
+  .search-bar {
+    display: none !important;
+  }
+</style>
+
 </head>
 <body>
+<a href="../index.html" class="back-link">← ホームに戻る</a>
   <header>
-    <h1>酒田五法</h1>
-    <nav><a href="../glossary.html">戻る</a></nav>
+    <nav><a href="../index.html">ホーム</a> / <a href="../glossary.html">用語辞典</a> / 酒田五法（ローソク足の体系）</nav>
+    <h1>酒田五法（ローソク足の体系）</h1>
+</div>
+    <p class="lead">酒田五法は、江戸時代の米相場から伝わるローソク足の体系。三山・三川・三兵・窓・三法など、足の並びと位置関係で相場の心理転換を捉えます。文脈（トレンド×S/R）とセットで運用するのが肝心です。</p>
   </header>
-  <main>
-    <p>酒田五法は日本の伝統的なローソク足分析法であり、5つの基本形で相場転換を捉える。</p>
-    <p>以下は酒田五法の実際のチャート例です：</p>
-    <img src="../img/sakata_chart.png" alt="酒田五法 チャート例" style="max-width:100%;border:1px solid #555;">
+  <main class="doc">
+    <h2>基本形</h2>
+<ul><li>三山（三尊）・三川（逆三尊）・三兵（赤三兵/黒三兵）</li><li>窓（ギャップ）の出現箇所と埋め挙動</li><li>三法（はらみ・たくり等の連続形）</li></ul>
+<h2>運用手順</h2>
+<ol><li>上位足のトレンドと主要S/Rを先に確定</li><li>該当パターンが“どの位置”で出たかを評価（天井圏/底値圏/中段）</li><li>出来高とボラの変化で信頼度を査定</li></ol>
+<h2>落とし穴</h2>
+<ul><li>見た目だけの再現で鵜呑みにする（文脈無視）</li><li>小時間足のノイズをパターンに見立てる</li></ul>
+<h2>実戦アドバイス</h2>
+<ul><li>初心者：はっきりした三山/三川のみに限定</li><li>中級者：窓の出現位置と埋めのスピードに注目</li><li>上級者：足の実体・ヒゲ比率を数値化し、否定で素早い撤退</li></ul>
+
+    <h2>図解</h2>
+    
+    <figure class="explained">
+      <img src="../img/law_sakata_tiles_numonly.png?v=jpnum" alt="酒田五法（代表パターンの例）">
+      <figcaption><strong>酒田五法（代表パターンの例）</strong></figcaption>
+      <details open>
+        <summary>図の読み方</summary>
+        <ul><li>左上：三山（天井）／右上：三川（底）。パターンの“位置”が重要。</li><li>左下：赤三兵（強い上昇継続）／右下：黒三兵（弱い下降継続）。</li><li>いずれも上位足のS/Rと出来高で裏取りして信頼度を判断。</li></ul>
+      </details>
+    </figure>
+    <figure><img src="../img/breakout_compare_candle.png" alt="breakout_compare_candle.png"><figcaption>breakout_compare_candle.png</figcaption></figure>
   </main>
 </body>
 </html>

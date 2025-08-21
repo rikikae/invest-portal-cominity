@@ -1,22 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const box = document.getElementById('searchBox');
-  const results = document.getElementById('searchResults');
-  /* recommend grid removed */}</div><div>${t.name}</div>`;
-      d.addEventListener('click', () => location.href = 'glossary.html?q=' + encodeURIComponent(t.name));
-      recGrid.appendChild(d);
-    });
+
+(async function(){
+  const input = document.getElementById('q');
+  const box = document.getElementById('search-results');
+  if(!input || !box) return;
+  let index = [];
+  try {
+    const res = await fetch('data/terms_index.json');
+    index = await res.json();
+  } catch(e) { /* noop */ }
+
+  function render(results){
+    if(!results.length){ box.innerHTML = ''; return; }
+    box.innerHTML = '<ul class="search-list">' + results.map(r=>`<li><a href="${r.url}"><strong>${r.title}</strong></a><br><span>${r.summary}…</span></li>`).join('') + '</ul>';
   }
-  if (!box || !results || !window.TERMS) return;
-  box.addEventListener('input', () => {
-    const q = (box.value || '').toLowerCase();
-    results.innerHTML = '';
-    if (!q) return;
-    window.TERMS.filter(t => t.name.toLowerCase().includes(q))
-      .slice(0, 8)
-      .forEach(t => {
-        const li = document.createElement('li');
-        li.innerHTML = `<a href="glossary.html?q=${encodeURIComponent(t.name)}">${t.name}</a>`;
-        results.appendChild(li);
-      });
+  input.removeAttribute('disabled');
+  input.addEventListener('input', (e)=>{
+    const q = e.target.value.trim();
+    if(!q){ render([]); return; }
+    const qs = q.toLowerCase();
+    const results = index.filter(it => (it.title+it.content).toLowerCase().includes(qs)).slice(0,20);
+    render(results);
   });
-});
+})();

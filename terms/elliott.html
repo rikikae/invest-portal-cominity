@@ -1,20 +1,78 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>エリオット波動</title>
-  <link rel="stylesheet" href="../css/style.css">
+<style>
+  figure img {
+    max-width: 680px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: .25rem auto;
+  }
+  .search-bar {
+    display: none !important;
+  }
+</style>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>エリオット波動（実践ガイド）</title>
+  <link rel="stylesheet" href="../css/style.css" />
+<style>
+  /* 投資理論ページ専用（このページだけに適用） */
+  figure img {
+    max-width: 680px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: .25rem auto;
+  }
+  .search-bar {
+    display: none !important;
+  }
+</style>
+
 </head>
 <body>
+<a href="../index.html" class="back-link">← ホームに戻る</a>
   <header>
-    <h1>エリオット波動</h1>
-    <nav><a href="../glossary.html">戻る</a></nav>
+    <nav><a href="../index.html">ホーム</a> / <a href="../glossary.html">用語辞典</a> / エリオット波動（実践ガイド）</nav>
+    <h1>エリオット波動（実践ガイド）</h1>
+</div>
+    <p class="lead">エリオット波動は、推進5波＋調整3波という“波のリズム”で値動きを記述します。黄金比やオルタネーション原則、ダイバージェンスを補助規則として活用し、代替カウントを常備することで主観性を抑制します。</p>
   </header>
-  <main>
-    <p>エリオット波動理論は相場が一定の波動パターンで動くとする理論。</p>
-    <p>以下はエリオット波動の実際のチャート例です：</p>
-    <img src="../img/elliott_chart.png" alt="エリオット波動 チャート例" style="max-width:100%;border:1px solid #555;">
+  <main class="doc">
+    <h2>理論の骨子</h2>
+<ul><li>推進（1-5）と調整（A-B-C）で1サイクル</li><li>波2は波1の起点を割らない／波3は最短にならない</li><li>オルタネーション：波2と波4は性質が対照になりやすい（深さ・時間・複雑度）</li></ul>
+<h2>フィボナッチとの関係</h2>
+<ul><li>押しの目安：38.2%/50%/61.8%</li><li>波5の目標：波1の0.618倍〜同等、もしくは1.618倍の拡張</li><li>調整完了の候補：前スイングの61.8%・78.6%＋S/R合流</li></ul>
+<h2>実務の手順</h2>
+<ol><li>上位足で主要波（1-5 or A-B-C）を仮定</li><li>下位足でサブ波を検証し、代替カウントを2通り用意</li><li>RSI/MACDのダイバージェンスで波の終盤を警戒</li><li>価格・時間の比率（比率・時間関係）を並行チェック</li></ol>
+<h2>落とし穴</h2>
+<ul><li>カウントの後付け（正解探し）に陥る</li><li>複雑修正に固執してエントリーが遅れる</li><li>時間軸の伸縮を軽視して誤差が拡大</li></ul>
+<h2>実戦アドバイス</h2>
+<ul><li>初心者：主要波だけを数える練習→複雑修正は避ける</li><li>中級者：フィボ×S/R×ローソク足の合流で“確率帯”を作る</li><li>上級者：マルチタイム×出来高分析で波3/波Cの勢いをトレードに活かす</li></ul>
+
+    <h2>図解</h2>
+    
+    <figure class="explained">
+      <img src="../img/law_elliott_impulse_numonly.png?v=jpnum" alt="推進5波の基本">
+      <figcaption><strong>推進5波の基本</strong></figcaption>
+      <details open>
+        <summary>図の読み方</summary>
+        <ul><li>①〜⑤が推進波。③は最短にならないのが原則。</li><li>ガイドライン（破線）で①-③-⑤の一直線性を確認。</li><li>②と④は性質が対照になりやすい（深さ・時間）。</li></ul>
+      </details>
+    </figure>
+    
+    <figure class="explained">
+      <img src="../img/law_elliott_abc_numonly.png?v=jpnum" alt="調整ABCの基本">
+      <figcaption><strong>調整ABCの基本</strong></figcaption>
+      <details open>
+        <summary>図の読み方</summary>
+        <ul><li>①=A（下落）→②=B（戻り）→③=C（下落）で一巡。</li><li>Bの戻しが浅い場合は続落警戒。</li><li>フィボ61.8%/78.6%周辺と重なると反発候補。</li></ul>
+      </details>
+    </figure>
+    <figure><img src="../img/law_fibonacci_numonly.png?v=jpnum" alt="fib_retrace_candle.png"><figcaption>fib_retrace_candle.png</figcaption></figure>
   </main>
 </body>
 </html>

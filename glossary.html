@@ -9,53 +9,30 @@
   <script defer src="js/glossary.js"></script>
 </head>
 <body>
+<a href="../index.html" class="back-link">← ホームに戻る</a>
   <header>
-    <h1>📚 投資用語辞典</h1>
-    <div class="tabs" id="tabs"></div>
-    <div id="global-search">
-      <input id="g-search" type="text" placeholder="用語・説明を検索..." />
-    </div>
+    <h1>用語辞典</h1>
     <nav>
-      <a href="index.html">ホーム</a>
+      <a href="index.html">ホーム</a> |
       <a href="glossary.html">用語辞典</a>
-          <a href="picks.html">株・銘柄</a>
     </nav>
   </header>
 
-  <main>
-    <div class="grid" id="grid"></div>
-  </main>
+  <!-- Dynamic glossary (109語) -->
+  <section>
+    <div class="toolbar">
+      <div id="tabs" class="tabs"></div>
+      <input id="g-search" type="text" placeholder="用語を検索…" />
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
 
-  <div class="modal" id="modal">
+  <!-- Modal for term details -->
+  <div id="modal" class="modal" style="display:none">
     <div class="modal-content">
-      <span class="close" id="close">✖</span>
-      <div>
-        <h2 id="m-title"></h2>
-        <div class="badge" id="m-cat"></div>
-        <div class="section">
-          <strong>概要</strong>
-          <p id="m-desc"></p>
-        </div>
-        <div class="section">
-          <strong>計算式 / ルール</strong>
-          <div class="kv" id="m-formula"></div>
-        </div>
-        <div class="section">
-          <strong>使い方のポイント</strong>
-          <ul id="m-usage"></ul>
-        </div>
-        <div class="section">
-          <strong>よくある落とし穴</strong>
-          <ul id="m-pitfalls"></ul>
-        </div>
-      </div>
-      <div class="rightcol">
-        <img id="m-img" alt="図解">
-        <p class="small" id="m-caption"></p>
-      </div>
+      <button id="close" class="close">×</button>
+      <div id="modal-body"></div>
     </div>
   </div>
-
-  <footer>&copy; 2025 投資ポータル</footer>
 </body>
 </html>
